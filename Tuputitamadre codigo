@@ -1,0 +1,1671 @@
+[Code]
+    File Name: DorkSearcherV2.py
+    Object Name: <module>
+    Qualified Name: <module>
+    Arg Count: 0
+    Pos Only Arg Count: 0
+    KW Only Arg Count: 0
+    Stack Size: 5
+    Flags: 0x00000000
+    [Names]
+        'requests'
+        'random'
+        'threading'
+        'concurrent.futures'
+        'ThreadPoolExecutor'
+        'as_completed'
+        'bs4'
+        'BeautifulSoup'
+        'colorama'
+        'Fore'
+        'time'
+        'urllib.parse'
+        'unquote'
+        'os'
+        'wmi'
+        'hashlib'
+        'subprocess'
+        'init'
+        'ghost_initi'
+        '__name__'
+        'print'
+        'RED'
+        'RESET'
+        'int'
+        'input'
+        'opcion'
+        'BLUE'
+        'get_windows_unique_id'
+        'verificar_clave'
+        'UID'
+        'clave'
+        'YELLOW'
+        'sleep'
+        'system'
+    [Locals+Names]
+    [Constants]
+        0
+        None
+        (
+            'ThreadPoolExecutor'
+            'as_completed'
+        )
+        (
+            'BeautifulSoup'
+        )
+        (
+            'Fore'
+        )
+        (
+            'unquote'
+        )
+        [Code]
+            File Name: DorkSearcherV2.py
+            Object Name: ghost_initi
+            Qualified Name: ghost_initi
+            Arg Count: 0
+            Pos Only Arg Count: 0
+            KW Only Arg Count: 0
+            Stack Size: 5
+            Flags: 0x00000003 (CO_OPTIMIZED | CO_NEWLOCALS)
+            [Names]
+                'print'
+                'int'
+                'input'
+                'time'
+            [Locals+Names]
+                'petres'
+                'Bots'
+                'elapsed_time'
+                'buscar_desde_archivo'
+                'archivo_keywords'
+                'archivo_resultados'
+                'archivo_proxies'
+                'DELAY_REINTENTO'
+                'MAX_REINTENTOS_PROXY'
+                'NUM_HILOS'
+                'NUM_RESULTADOS'
+                'TIMEOUT'
+                'buscar_y_guardar'
+                'count_lines'
+                'filtrar_y_guardar_resultados'
+                'headers'
+                'realizar_busqueda'
+                'remove_duplicates'
+                'start_time'
+            [Constants]
+                None
+                '\n          \n ΓûêΓûêΓûêΓûêΓûêΓûêΓòù ΓûêΓûêΓûêΓûêΓûêΓûêΓòù ΓûêΓûêΓûêΓòù   ΓûêΓûêΓòùΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓòùΓûêΓûêΓòù ΓûêΓûêΓûêΓûêΓûêΓûêΓòù ΓûêΓûêΓòù   ΓûêΓûêΓòùΓûêΓûêΓûêΓûêΓûêΓûêΓòù ΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓòù\nΓûêΓûêΓòöΓòÉΓòÉΓòÉΓòÉΓò¥ΓûêΓûêΓòöΓòÉΓòÉΓòÉΓûêΓûêΓòùΓûêΓûêΓûêΓûêΓòù  ΓûêΓûêΓòæΓûêΓûêΓòöΓòÉΓòÉΓòÉΓòÉΓò¥ΓûêΓûêΓòæΓûêΓûêΓòöΓòÉΓòÉΓòÉΓòÉΓò¥ ΓûêΓûêΓòæ   ΓûêΓûêΓòæΓûêΓûêΓòöΓòÉΓòÉΓûêΓûêΓòùΓûêΓûêΓòöΓòÉΓòÉΓòÉΓòÉΓò¥\nΓûêΓûêΓòæ     ΓûêΓûêΓòæ   ΓûêΓûêΓòæΓûêΓûêΓòöΓûêΓûêΓòù ΓûêΓûêΓòæΓûêΓûêΓûêΓûêΓûêΓòù  ΓûêΓûêΓòæΓûêΓûêΓòæ  ΓûêΓûêΓûêΓòùΓûêΓûêΓòæ   ΓûêΓûêΓòæΓûêΓûêΓûêΓûêΓûêΓûêΓòöΓò¥ΓûêΓûêΓûêΓûêΓûêΓòù  \nΓûêΓûêΓòæ     ΓûêΓûêΓòæ   ΓûêΓûêΓòæΓûêΓûêΓòæΓòÜΓûêΓûêΓòùΓûêΓûêΓòæΓûêΓûêΓòöΓòÉΓòÉΓò¥  ΓûêΓûêΓòæΓûêΓûêΓòæ   ΓûêΓûêΓòæΓûêΓûêΓòæ   ΓûêΓûêΓòæΓûêΓûêΓòöΓòÉΓòÉΓûêΓûêΓòùΓûêΓûêΓòöΓòÉΓòÉΓò¥  \nΓòÜΓûêΓûêΓûêΓûêΓûêΓûêΓòùΓòÜΓûêΓûêΓûêΓûêΓûêΓûêΓòöΓò¥ΓûêΓûêΓòæ ΓòÜΓûêΓûêΓûêΓûêΓòæΓûêΓûêΓòæ     ΓûêΓûêΓòæΓòÜΓûêΓûêΓûêΓûêΓûêΓûêΓòöΓò¥ΓòÜΓûêΓûêΓûêΓûêΓûêΓûêΓòöΓò¥ΓûêΓûêΓòæ  ΓûêΓûêΓòæΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓòù\n ΓòÜΓòÉΓòÉΓòÉΓòÉΓòÉΓò¥ ΓòÜΓòÉΓòÉΓòÉΓòÉΓòÉΓò¥ ΓòÜΓòÉΓò¥  ΓòÜΓòÉΓòÉΓòÉΓò¥ΓòÜΓòÉΓò¥     ΓòÜΓòÉΓò¥ ΓòÜΓòÉΓòÉΓòÉΓòÉΓòÉΓò¥  ΓòÜΓòÉΓòÉΓòÉΓòÉΓòÉΓò¥ ΓòÜΓòÉΓò¥  ΓòÜΓòÉΓò¥ΓòÜΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ\n                       1     2\n          Recomendado 100 \\ 200\n          \n          '
+                'Numero de URLS por peticiones: '
+                'Cantidad de Bots (0-500): '
+                'Error Debiste Escribir un valor numerico'
+                0
+                50
+                10
+                [Code]
+                    File Name: DorkSearcherV2.py
+                    Object Name: count_lines
+                    Qualified Name: ghost_initi.<locals>.count_lines
+                    Arg Count: 1
+                    Pos Only Arg Count: 0
+                    KW Only Arg Count: 0
+                    Stack Size: 6
+                    Flags: 0x00000013 (CO_OPTIMIZED | CO_NEWLOCALS | CO_NESTED)
+                    [Names]
+                        'open'
+                        'sum'
+                        'FileNotFoundError'
+                        'print'
+                        'IOError'
+                    [Locals+Names]
+                        'file_path'
+                        'file'
+                        'line_count'
+                        'e'
+                    [Constants]
+                        None
+                        'r'
+                        [Code]
+                            File Name: DorkSearcherV2.py
+                            Object Name: <genexpr>
+                            Qualified Name: ghost_initi.<locals>.count_lines.<locals>.<genexpr>
+                            Arg Count: 1
+                            Pos Only Arg Count: 0
+                            KW Only Arg Count: 0
+                            Stack Size: 2
+                            Flags: 0x00000033 (CO_OPTIMIZED | CO_NEWLOCALS | CO_NESTED | CO_GENERATOR)
+                            [Names]
+                            [Locals+Names]
+                                '.0'
+                                'line'
+                            [Constants]
+                                1
+                                None
+                            [Disassembly]
+                                0       RETURN_GENERATOR
+                                2       POP_TOP
+                                4       RESUME                          0
+                                6       LOAD_FAST                       0: .0
+                                8       FOR_ITER                        6 (to 22)
+                                12      STORE_FAST                      1: line
+                                14      LOAD_CONST                      0: 1
+                                16      YIELD_VALUE                     1
+                                18      RESUME                          1
+                                20      POP_TOP
+                                22      JUMP_BACKWARD                   8 (to 8)
+                                24      END_FOR
+                                26      RETURN_CONST                    1: None
+                                28      CALL_INTRINSIC_1                3 (INTRINSIC_STOPITERATION_ERROR)
+                                30      RERAISE                         1
+                        'Error: El archivo '
+                        ' no se encontr├│.'
+                        'Error de entrada/salida: '
+                    [Disassembly]
+                        0       RESUME                          0
+                        2       NOP
+                        4       LOAD_GLOBAL                     1: NULL + open
+                        14      LOAD_FAST                       0: file_path
+                        16      LOAD_CONST                      1: 'r'
+                        18      CALL                            2
+                        26      BEFORE_WITH
+                        28      STORE_FAST                      1: file
+                        30      LOAD_GLOBAL                     3: NULL + sum
+                        40      LOAD_CONST                      2: <CODE> <genexpr>
+                        42      MAKE_FUNCTION                   0
+                        44      LOAD_FAST                       1: file
+                        46      GET_ITER
+                        48      CALL                            0
+                        56      CALL                            1
+                        64      STORE_FAST                      2: line_count
+                        66      LOAD_CONST                      0: None
+                        68      LOAD_CONST                      0: None
+                        70      LOAD_CONST                      0: None
+                        72      CALL                            2
+                        80      POP_TOP
+                        82      LOAD_FAST                       2: line_count
+                        84      RETURN_VALUE
+                        86      PUSH_EXC_INFO
+                        88      WITH_EXCEPT_START
+                        90      POP_JUMP_IF_TRUE                1 (to 94)
+                        92      RERAISE                         2
+                        94      POP_TOP
+                        96      POP_EXCEPT
+                        98      POP_TOP
+                        100     POP_TOP
+                        102     LOAD_FAST_CHECK                 2: line_count
+                        104     RETURN_VALUE
+                        106     COPY                            3
+                        108     POP_EXCEPT
+                        110     RERAISE                         1
+                        112     PUSH_EXC_INFO
+                        114     LOAD_GLOBAL                     4: FileNotFoundError
+                        124     CHECK_EXC_MATCH
+                        126     POP_JUMP_IF_FALSE               18 (to 164)
+                        128     POP_TOP
+                        130     LOAD_GLOBAL                     7: NULL + print
+                        140     LOAD_CONST                      3: 'Error: El archivo '
+                        142     LOAD_FAST                       0: file_path
+                        144     FORMAT_VALUE                    0 (FVC_NONE)
+                        146     LOAD_CONST                      4: ' no se encontr├│.'
+                        148     BUILD_STRING                    3
+                        150     CALL                            1
+                        158     POP_TOP
+                        160     POP_EXCEPT
+                        162     RETURN_CONST                    0: None
+                        164     LOAD_GLOBAL                     8: IOError
+                        174     CHECK_EXC_MATCH
+                        176     POP_JUMP_IF_FALSE               24 (to 226)
+                        178     STORE_FAST                      3: e
+                        180     LOAD_GLOBAL                     7: NULL + print
+                        190     LOAD_CONST                      5: 'Error de entrada/salida: '
+                        192     LOAD_FAST                       3: e
+                        194     FORMAT_VALUE                    0 (FVC_NONE)
+                        196     BUILD_STRING                    2
+                        198     CALL                            1
+                        206     POP_TOP
+                        208     POP_EXCEPT
+                        210     LOAD_CONST                      0: None
+                        212     STORE_FAST                      3: e
+                        214     DELETE_FAST                     3: e
+                        216     RETURN_CONST                    0: None
+                        218     LOAD_CONST                      0: None
+                        220     STORE_FAST                      3: e
+                        222     DELETE_FAST                     3: e
+                        224     RERAISE                         1
+                        226     RERAISE                         0
+                        228     COPY                            3
+                        230     POP_EXCEPT
+                        232     RERAISE                         1
+                'results.txt'
+                [Code]
+                    File Name: DorkSearcherV2.py
+                    Object Name: remove_duplicates
+                    Qualified Name: ghost_initi.<locals>.remove_duplicates
+                    Arg Count: 1
+                    Pos Only Arg Count: 0
+                    KW Only Arg Count: 0
+                    Stack Size: 6
+                    Flags: 0x00000013 (CO_OPTIMIZED | CO_NEWLOCALS | CO_NESTED)
+                    [Names]
+                        'open'
+                        'readlines'
+                        'sorted'
+                        'set'
+                        'index'
+                        'writelines'
+                        'FileNotFoundError'
+                        'IOError'
+                    [Locals+Names]
+                        'file_path'
+                        'file'
+                        'lines'
+                        'unique_lines'
+                    [Constants]
+                        None
+                        'r'
+                        (
+                            'key'
+                        )
+                        'w'
+                    [Disassembly]
+                        0       RESUME                          0
+                        2       NOP
+                        4       LOAD_GLOBAL                     1: NULL + open
+                        14      LOAD_FAST                       0: file_path
+                        16      LOAD_CONST                      1: 'r'
+                        18      CALL                            2
+                        26      BEFORE_WITH
+                        28      STORE_FAST                      1: file
+                        30      LOAD_FAST                       1: file
+                        32      LOAD_ATTR                       3: readlines
+                        52      CALL                            0
+                        60      STORE_FAST                      2: lines
+                        62      LOAD_CONST                      0: None
+                        64      LOAD_CONST                      0: None
+                        66      LOAD_CONST                      0: None
+                        68      CALL                            2
+                        76      POP_TOP
+                        78      LOAD_GLOBAL                     5: NULL + sorted
+                        88      LOAD_GLOBAL                     7: NULL + set
+                        98      LOAD_FAST_CHECK                 2: lines
+                        100     CALL                            1
+                        108     LOAD_FAST                       2: lines
+                        110     LOAD_ATTR                       8: index
+                        130     KW_NAMES                        2: ('key',)
+                        132     CALL                            2
+                        140     STORE_FAST                      3: unique_lines
+                        142     LOAD_GLOBAL                     1: NULL + open
+                        152     LOAD_FAST                       0: file_path
+                        154     LOAD_CONST                      3: 'w'
+                        156     CALL                            2
+                        164     BEFORE_WITH
+                        166     STORE_FAST                      1: file
+                        168     LOAD_FAST                       1: file
+                        170     LOAD_ATTR                       11: writelines
+                        190     LOAD_FAST                       3: unique_lines
+                        192     CALL                            1
+                        200     POP_TOP
+                        202     LOAD_CONST                      0: None
+                        204     LOAD_CONST                      0: None
+                        206     LOAD_CONST                      0: None
+                        208     CALL                            2
+                        216     POP_TOP
+                        218     RETURN_CONST                    0: None
+                        220     PUSH_EXC_INFO
+                        222     WITH_EXCEPT_START
+                        224     POP_JUMP_IF_TRUE                1 (to 228)
+                        226     RERAISE                         2
+                        228     POP_TOP
+                        230     POP_EXCEPT
+                        232     POP_TOP
+                        234     POP_TOP
+                        236     JUMP_BACKWARD                   80 (to 78)
+                        238     COPY                            3
+                        240     POP_EXCEPT
+                        242     RERAISE                         1
+                        244     PUSH_EXC_INFO
+                        246     WITH_EXCEPT_START
+                        248     POP_JUMP_IF_TRUE                1 (to 252)
+                        250     RERAISE                         2
+                        252     POP_TOP
+                        254     POP_EXCEPT
+                        256     POP_TOP
+                        258     POP_TOP
+                        260     RETURN_CONST                    0: None
+                        262     COPY                            3
+                        264     POP_EXCEPT
+                        266     RERAISE                         1
+                        268     PUSH_EXC_INFO
+                        270     LOAD_GLOBAL                     12: FileNotFoundError
+                        280     CHECK_EXC_MATCH
+                        282     POP_JUMP_IF_FALSE               3 (to 290)
+                        284     POP_TOP
+                        286     POP_EXCEPT
+                        288     RETURN_CONST                    0: None
+                        290     LOAD_GLOBAL                     14: IOError
+                        300     CHECK_EXC_MATCH
+                        302     POP_JUMP_IF_FALSE               3 (to 310)
+                        304     POP_TOP
+                        306     POP_EXCEPT
+                        308     RETURN_CONST                    0: None
+                        310     RERAISE                         0
+                        312     COPY                            3
+                        314     POP_EXCEPT
+                        316     RERAISE                         1
+                [Code]
+                    File Name: DorkSearcherV2.py
+                    Object Name: elapsed_time
+                    Qualified Name: ghost_initi.<locals>.elapsed_time
+                    Arg Count: 0
+                    Pos Only Arg Count: 0
+                    KW Only Arg Count: 0
+                    Stack Size: 4
+                    Flags: 0x00000013 (CO_OPTIMIZED | CO_NEWLOCALS | CO_NESTED)
+                    [Names]
+                        'time'
+                        'int'
+                    [Locals+Names]
+                        'elapsed'
+                        'hours'
+                        'minutes'
+                        'seconds'
+                        'start_time'
+                    [Constants]
+                        None
+                        3600
+                        60
+                    [Disassembly]
+                        0       COPY_FREE_VARS                  1
+                        2       RESUME                          0
+                        4       LOAD_GLOBAL                     1: NULL + time
+                        14      LOAD_ATTR                       0: time
+                        34      CALL                            0
+                        42      LOAD_DEREF                      4: start_time
+                        44      BINARY_OP                       10 (-)
+                        48      STORE_FAST                      0: elapsed
+                        50      LOAD_GLOBAL                     3: NULL + int
+                        60      LOAD_FAST                       0: elapsed
+                        62      LOAD_CONST                      1: 3600
+                        64      BINARY_OP                       2 (//)
+                        68      CALL                            1
+                        76      STORE_FAST                      1: hours
+                        78      LOAD_GLOBAL                     3: NULL + int
+                        88      LOAD_FAST                       0: elapsed
+                        90      LOAD_CONST                      1: 3600
+                        92      BINARY_OP                       6 (%)
+                        96      LOAD_CONST                      2: 60
+                        98      BINARY_OP                       2 (//)
+                        102     CALL                            1
+                        110     STORE_FAST                      2: minutes
+                        112     LOAD_GLOBAL                     3: NULL + int
+                        122     LOAD_FAST                       0: elapsed
+                        124     LOAD_CONST                      2: 60
+                        126     BINARY_OP                       6 (%)
+                        130     CALL                            1
+                        138     STORE_FAST                      3: seconds
+                        140     LOAD_FAST                       1: hours
+                        142     LOAD_FAST                       2: minutes
+                        144     LOAD_FAST                       3: seconds
+                        146     BUILD_TUPLE                     3
+                        148     RETURN_VALUE
+                [Code]
+                    File Name: DorkSearcherV2.py
+                    Object Name: realizar_busqueda
+                    Qualified Name: ghost_initi.<locals>.realizar_busqueda
+                    Arg Count: 2
+                    Pos Only Arg Count: 0
+                    KW Only Arg Count: 0
+                    Stack Size: 6
+                    Flags: 0x00000013 (CO_OPTIMIZED | CO_NEWLOCALS | CO_NESTED)
+                    [Names]
+                        'requests'
+                        'get'
+                        'status_code'
+                        'text'
+                        'BeautifulSoup'
+                        'find_all'
+                        'split'
+                        'append'
+                        'unquote'
+                        'RequestException'
+                    [Locals+Names]
+                        'query'
+                        'proxy'
+                        'url'
+                        'proxies'
+                        'response'
+                        'html'
+                        'soup'
+                        'urls'
+                        'result'
+                        'href'
+                        'link'
+                        'e'
+                        'NUM_RESULTADOS'
+                        'TIMEOUT'
+                        'headers'
+                    [Constants]
+                        'Realiza una b├║squeda en Google y devuelve las URLs de los resultados de manera sincr├│nica.'
+                        'https://www.google.com/search?q='
+                        '&num='
+                        'http://'
+                        (
+                            'http'
+                            'https'
+                        )
+                        None
+                        (
+                            'proxies'
+                            'headers'
+                            'timeout'
+                        )
+                        200
+                        'html.parser'
+                        'a'
+                        True
+                        (
+                            'href'
+                        )
+                        'href'
+                        'url?q='
+                        1
+                        '&'
+                        0
+                    [Disassembly]
+                        0       COPY_FREE_VARS                  3
+                        2       RESUME                          0
+                        4       LOAD_CONST                      1: 'https://www.google.com/search?q='
+                        6       LOAD_FAST                       0: query
+                        8       FORMAT_VALUE                    0 (FVC_NONE)
+                        10      LOAD_CONST                      2: '&num='
+                        12      LOAD_DEREF                      12: NUM_RESULTADOS
+                        14      FORMAT_VALUE                    0 (FVC_NONE)
+                        16      BUILD_STRING                    4
+                        18      STORE_FAST                      2: url
+                        20      LOAD_FAST                       1: proxy
+                        22      POP_JUMP_IF_FALSE               11 (to 46)
+                        24      LOAD_CONST                      3: 'http://'
+                        26      LOAD_FAST                       1: proxy
+                        28      FORMAT_VALUE                    0 (FVC_NONE)
+                        30      BUILD_STRING                    2
+                        32      LOAD_CONST                      3: 'http://'
+                        34      LOAD_FAST                       1: proxy
+                        36      FORMAT_VALUE                    0 (FVC_NONE)
+                        38      BUILD_STRING                    2
+                        40      LOAD_CONST                      4: ('http', 'https')
+                        42      BUILD_CONST_KEY_MAP             2
+                        44      JUMP_FORWARD                    1 (to 48)
+                        46      LOAD_CONST                      5: None
+                        48      STORE_FAST                      3: proxies
+                        50      NOP
+                        52      LOAD_GLOBAL                     1: NULL + requests
+                        62      LOAD_ATTR                       2: get
+                        82      LOAD_FAST                       2: url
+                        84      LOAD_FAST                       3: proxies
+                        86      LOAD_DEREF                      14: headers
+                        88      LOAD_DEREF                      13: TIMEOUT
+                        90      KW_NAMES                        6: ('proxies', 'headers', 'timeout')
+                        92      CALL                            4
+                        100     STORE_FAST                      4: response
+                        102     LOAD_FAST                       4: response
+                        104     LOAD_ATTR                       4: status_code
+                        124     LOAD_CONST                      7: 200
+                        126     COMPARE_OP                      55 (!=)
+                        130     POP_JUMP_IF_FALSE               3 (to 138)
+                        132     NOP
+                        134     BUILD_LIST                      0
+                        136     RETURN_VALUE
+                        138     LOAD_FAST                       4: response
+                        140     LOAD_ATTR                       6: text
+                        160     STORE_FAST                      5: html
+                        162     LOAD_GLOBAL                     9: NULL + BeautifulSoup
+                        172     LOAD_FAST                       5: html
+                        174     LOAD_CONST                      8: 'html.parser'
+                        176     CALL                            2
+                        184     STORE_FAST                      6: soup
+                        186     BUILD_LIST                      0
+                        188     STORE_FAST                      7: urls
+                        190     LOAD_FAST                       6: soup
+                        192     LOAD_ATTR                       11: find_all
+                        212     LOAD_CONST                      9: 'a'
+                        214     LOAD_CONST                      10: True
+                        216     KW_NAMES                        11: ('href',)
+                        218     CALL                            2
+                        226     GET_ITER
+                        228     FOR_ITER                        76 (to 382)
+                        232     STORE_FAST                      8: result
+                        234     LOAD_FAST                       8: result
+                        236     LOAD_CONST                      12: 'href'
+                        238     BINARY_SUBSCR
+                        242     STORE_FAST                      9: href
+                        244     LOAD_CONST                      13: 'url?q='
+                        246     LOAD_FAST                       9: href
+                        248     CONTAINS_OP                     0 (in)
+                        250     POP_JUMP_IF_TRUE                1 (to 254)
+                        252     JUMP_BACKWARD                   13 (to 228)
+                        254     LOAD_FAST                       9: href
+                        256     LOAD_ATTR                       13: split
+                        276     LOAD_CONST                      13: 'url?q='
+                        278     CALL                            1
+                        286     LOAD_CONST                      14: 1
+                        288     BINARY_SUBSCR
+                        292     LOAD_ATTR                       13: split
+                        312     LOAD_CONST                      15: '&'
+                        314     CALL                            1
+                        322     LOAD_CONST                      16: 0
+                        324     BINARY_SUBSCR
+                        328     STORE_FAST                      10: link
+                        330     LOAD_FAST                       7: urls
+                        332     LOAD_ATTR                       15: append
+                        352     LOAD_GLOBAL                     17: NULL + unquote
+                        362     LOAD_FAST                       10: link
+                        364     CALL                            1
+                        372     CALL                            1
+                        380     POP_TOP
+                        382     JUMP_BACKWARD                   78 (to 228)
+                        384     END_FOR
+                        386     LOAD_FAST                       7: urls
+                        388     RETURN_VALUE
+                        390     PUSH_EXC_INFO
+                        392     LOAD_GLOBAL                     0: requests
+                        402     LOAD_ATTR                       18: RequestException
+                        422     CHECK_EXC_MATCH
+                        424     POP_JUMP_IF_FALSE               13 (to 452)
+                        426     STORE_FAST                      11: e
+                        428     NOP
+                        430     BUILD_LIST                      0
+                        432     SWAP                            2
+                        434     POP_EXCEPT
+                        436     LOAD_CONST                      5: None
+                        438     STORE_FAST                      11: e
+                        440     DELETE_FAST                     11: e
+                        442     RETURN_VALUE
+                        444     LOAD_CONST                      5: None
+                        446     STORE_FAST                      11: e
+                        448     DELETE_FAST                     11: e
+                        450     RERAISE                         1
+                        452     RERAISE                         0
+                        454     COPY                            3
+                        456     POP_EXCEPT
+                        458     RERAISE                         1
+                [Code]
+                    File Name: DorkSearcherV2.py
+                    Object Name: filtrar_y_guardar_resultados
+                    Qualified Name: ghost_initi.<locals>.filtrar_y_guardar_resultados
+                    Arg Count: 2
+                    Pos Only Arg Count: 0
+                    KW Only Arg Count: 0
+                    Stack Size: 6
+                    Flags: 0x00000013 (CO_OPTIMIZED | CO_NEWLOCALS | CO_NESTED)
+                    [Names]
+                        'open'
+                        'write'
+                        'print'
+                        'Fore'
+                        'GREEN'
+                        'RESET'
+                        'os'
+                        'system'
+                    [Locals+Names]
+                        'archivo_resultados'
+                        'resultados'
+                        'url'
+                        'urls_validas'
+                        'file'
+                        'line_count'
+                        'count_lines'
+                        'remove_duplicates'
+                    [Constants]
+                        "Filtra URLs que contienen '=' y no contienen '/search', 'youtube.com', 'google.com', 'twitter.com', 'facebook.com', 'instagram.com' y guarda los resultados en un archivo de manera sincr├│nica."
+                        '='
+                        '/search'
+                        'youtube.com'
+                        'google.com'
+                        'twitter.com'
+                        'facebook.com'
+                        'instagram.com'
+                        'a'
+                        'utf-8'
+                        (
+                            'encoding'
+                        )
+                        '\n'
+                        'results.txt'
+                        'title URLS: '
+                        None
+                    [Disassembly]
+                        0       COPY_FREE_VARS                  2
+                        2       RESUME                          0
+                        4       LOAD_FAST                       1: resultados
+                        6       GET_ITER
+                        8       LOAD_FAST_AND_CLEAR             2: url
+                        10      SWAP                            2
+                        12      BUILD_SET                       0
+                        14      SWAP                            2
+                        16      FOR_ITER                        32 (to 82)
+                        20      STORE_FAST                      2: url
+                        22      LOAD_CONST                      1: '='
+                        24      LOAD_FAST                       2: url
+                        26      CONTAINS_OP                     0 (in)
+                        28      POP_JUMP_IF_FALSE               26 (to 82)
+                        30      LOAD_CONST                      2: '/search'
+                        32      LOAD_FAST                       2: url
+                        34      CONTAINS_OP                     1 (not in)
+                        36      POP_JUMP_IF_FALSE               22 (to 82)
+                        38      LOAD_CONST                      3: 'youtube.com'
+                        40      LOAD_FAST                       2: url
+                        42      CONTAINS_OP                     1 (not in)
+                        44      POP_JUMP_IF_FALSE               18 (to 82)
+                        46      LOAD_CONST                      4: 'google.com'
+                        48      LOAD_FAST                       2: url
+                        50      CONTAINS_OP                     1 (not in)
+                        52      POP_JUMP_IF_FALSE               14 (to 82)
+                        54      LOAD_CONST                      5: 'twitter.com'
+                        56      LOAD_FAST                       2: url
+                        58      CONTAINS_OP                     1 (not in)
+                        60      POP_JUMP_IF_FALSE               10 (to 82)
+                        62      LOAD_CONST                      6: 'facebook.com'
+                        64      LOAD_FAST                       2: url
+                        66      CONTAINS_OP                     1 (not in)
+                        68      POP_JUMP_IF_FALSE               6 (to 82)
+                        70      LOAD_CONST                      7: 'instagram.com'
+                        72      LOAD_FAST                       2: url
+                        74      CONTAINS_OP                     1 (not in)
+                        76      POP_JUMP_IF_FALSE               2 (to 82)
+                        78      LOAD_FAST                       2: url
+                        80      SET_ADD                         2
+                        82      JUMP_BACKWARD                   34 (to 16)
+                        84      END_FOR
+                        86      STORE_FAST                      3: urls_validas
+                        88      STORE_FAST                      2: url
+                        90      LOAD_GLOBAL                     1: NULL + open
+                        100     LOAD_FAST                       0: archivo_resultados
+                        102     LOAD_CONST                      8: 'a'
+                        104     LOAD_CONST                      9: 'utf-8'
+                        106     KW_NAMES                        10: ('encoding',)
+                        108     CALL                            3
+                        116     BEFORE_WITH
+                        118     STORE_FAST                      4: file
+                        120     LOAD_FAST                       3: urls_validas
+                        122     GET_ITER
+                        124     FOR_ITER                        99 (to 324)
+                        128     STORE_FAST                      2: url
+                        130     LOAD_FAST                       4: file
+                        132     LOAD_ATTR                       3: write
+                        152     LOAD_FAST                       2: url
+                        154     LOAD_CONST                      11: '\n'
+                        156     BINARY_OP                       0 (+)
+                        160     CALL                            1
+                        168     POP_TOP
+                        170     LOAD_GLOBAL                     5: NULL + print
+                        180     LOAD_GLOBAL                     6: Fore
+                        190     LOAD_ATTR                       8: GREEN
+                        210     LOAD_FAST                       2: url
+                        212     BINARY_OP                       0 (+)
+                        216     LOAD_GLOBAL                     6: Fore
+                        226     LOAD_ATTR                       10: RESET
+                        246     BINARY_OP                       0 (+)
+                        250     CALL                            1
+                        258     POP_TOP
+                        260     PUSH_NULL
+                        262     LOAD_DEREF                      6: count_lines
+                        264     LOAD_CONST                      12: 'results.txt'
+                        266     CALL                            1
+                        274     STORE_FAST                      5: line_count
+                        276     LOAD_GLOBAL                     13: NULL + os
+                        286     LOAD_ATTR                       14: system
+                        306     LOAD_CONST                      13: 'title URLS: '
+                        308     LOAD_FAST                       5: line_count
+                        310     FORMAT_VALUE                    0 (FVC_NONE)
+                        312     BUILD_STRING                    2
+                        314     CALL                            1
+                        322     POP_TOP
+                        324     JUMP_BACKWARD                   101 (to 124)
+                        326     END_FOR
+                        328     NOP
+                        330     LOAD_CONST                      14: None
+                        332     LOAD_CONST                      14: None
+                        334     LOAD_CONST                      14: None
+                        336     CALL                            2
+                        344     POP_TOP
+                        346     PUSH_NULL
+                        348     LOAD_DEREF                      7: remove_duplicates
+                        350     LOAD_FAST                       0: archivo_resultados
+                        352     CALL                            1
+                        360     POP_TOP
+                        362     RETURN_CONST                    14: None
+                        364     SWAP                            2
+                        366     POP_TOP
+                        368     SWAP                            2
+                        370     STORE_FAST                      2: url
+                        372     RERAISE                         0
+                        374     PUSH_EXC_INFO
+                        376     WITH_EXCEPT_START
+                        378     POP_JUMP_IF_TRUE                1 (to 382)
+                        380     RERAISE                         2
+                        382     POP_TOP
+                        384     POP_EXCEPT
+                        386     POP_TOP
+                        388     POP_TOP
+                        390     JUMP_BACKWARD                   23 (to 346)
+                        392     COPY                            3
+                        394     POP_EXCEPT
+                        396     RERAISE                         1
+                [Code]
+                    File Name: DorkSearcherV2.py
+                    Object Name: buscar_y_guardar
+                    Qualified Name: ghost_initi.<locals>.buscar_y_guardar
+                    Arg Count: 3
+                    Pos Only Arg Count: 0
+                    KW Only Arg Count: 0
+                    Stack Size: 9
+                    Flags: 0x00000013 (CO_OPTIMIZED | CO_NEWLOCALS | CO_NESTED)
+                    [Names]
+                        'random'
+                        'choice'
+                        'print'
+                        'time'
+                        'sleep'
+                    [Locals+Names]
+                        'query'
+                        'archivo_resultados'
+                        'proxies'
+                        'proxy_attempts'
+                        'proxy'
+                        'urls'
+                        'DELAY_REINTENTO'
+                        'MAX_REINTENTOS_PROXY'
+                        'filtrar_y_guardar_resultados'
+                        'realizar_busqueda'
+                    [Constants]
+                        'Realiza la b├║squeda y guarda los resultados en el archivo, usando rotaci├│n de proxies y manejo de reintentos.'
+                        0
+                        None
+                        'Buscando para: "'
+                        '" usando proxy '
+                        ' (Intento '
+                        1
+                        ')'
+                        'Resultados guardados para: "'
+                        '"'
+                        'No se encontraron resultados para "'
+                        '" despu├⌐s de '
+                        ' intentos con diferentes proxies.'
+                    [Disassembly]
+                        0       COPY_FREE_VARS                  4
+                        2       RESUME                          0
+                        4       LOAD_CONST                      1: 0
+                        6       STORE_FAST                      3: proxy_attempts
+                        8       LOAD_FAST                       3: proxy_attempts
+                        10      LOAD_DEREF                      7: MAX_REINTENTOS_PROXY
+                        12      COMPARE_OP                      2 (<)
+                        16      POP_JUMP_IF_FALSE               118 (to 254)
+                        18      LOAD_FAST                       2: proxies
+                        20      POP_JUMP_IF_FALSE               21 (to 64)
+                        22      LOAD_GLOBAL                     1: NULL + random
+                        32      LOAD_ATTR                       2: choice
+                        52      LOAD_FAST                       2: proxies
+                        54      CALL                            1
+                        62      JUMP_FORWARD                    1 (to 66)
+                        64      LOAD_CONST                      2: None
+                        66      STORE_FAST                      4: proxy
+                        68      LOAD_GLOBAL                     5: NULL + print
+                        78      LOAD_CONST                      3: 'Buscando para: "'
+                        80      LOAD_FAST                       0: query
+                        82      FORMAT_VALUE                    0 (FVC_NONE)
+                        84      LOAD_CONST                      4: '" usando proxy '
+                        86      LOAD_FAST                       4: proxy
+                        88      FORMAT_VALUE                    0 (FVC_NONE)
+                        90      LOAD_CONST                      5: ' (Intento '
+                        92      LOAD_FAST                       3: proxy_attempts
+                        94      LOAD_CONST                      6: 1
+                        96      BINARY_OP                       0 (+)
+                        100     FORMAT_VALUE                    0 (FVC_NONE)
+                        102     LOAD_CONST                      7: ')'
+                        104     BUILD_STRING                    7
+                        106     CALL                            1
+                        114     POP_TOP
+                        116     PUSH_NULL
+                        118     LOAD_DEREF                      9: realizar_busqueda
+                        120     LOAD_FAST                       0: query
+                        122     LOAD_FAST                       4: proxy
+                        124     CALL                            2
+                        132     STORE_FAST                      5: urls
+                        134     LOAD_FAST                       5: urls
+                        136     POP_JUMP_IF_FALSE               25 (to 188)
+                        138     PUSH_NULL
+                        140     LOAD_DEREF                      8: filtrar_y_guardar_resultados
+                        142     LOAD_FAST                       1: archivo_resultados
+                        144     LOAD_FAST                       5: urls
+                        146     CALL                            2
+                        154     POP_TOP
+                        156     LOAD_GLOBAL                     5: NULL + print
+                        166     LOAD_CONST                      8: 'Resultados guardados para: "'
+                        168     LOAD_FAST                       0: query
+                        170     FORMAT_VALUE                    0 (FVC_NONE)
+                        172     LOAD_CONST                      9: '"'
+                        174     BUILD_STRING                    3
+                        176     CALL                            1
+                        184     POP_TOP
+                        186     RETURN_CONST                    2: None
+                        188     NOP
+                        190     LOAD_FAST                       3: proxy_attempts
+                        192     LOAD_CONST                      6: 1
+                        194     BINARY_OP                       13 (+=)
+                        198     STORE_FAST                      3: proxy_attempts
+                        200     LOAD_GLOBAL                     7: NULL + time
+                        210     LOAD_ATTR                       8: sleep
+                        230     LOAD_DEREF                      6: DELAY_REINTENTO
+                        232     CALL                            1
+                        240     POP_TOP
+                        242     LOAD_FAST                       3: proxy_attempts
+                        244     LOAD_DEREF                      7: MAX_REINTENTOS_PROXY
+                        246     COMPARE_OP                      2 (<)
+                        250     POP_JUMP_IF_FALSE               1 (to 254)
+                        252     JUMP_BACKWARD                   118 (to 18)
+                        254     LOAD_GLOBAL                     5: NULL + print
+                        264     LOAD_CONST                      10: 'No se encontraron resultados para "'
+                        266     LOAD_FAST                       0: query
+                        268     FORMAT_VALUE                    0 (FVC_NONE)
+                        270     LOAD_CONST                      11: '" despu├⌐s de '
+                        272     LOAD_DEREF                      7: MAX_REINTENTOS_PROXY
+                        274     FORMAT_VALUE                    0 (FVC_NONE)
+                        276     LOAD_CONST                      12: ' intentos con diferentes proxies.'
+                        278     BUILD_STRING                    5
+                        280     CALL                            1
+                        288     POP_TOP
+                        290     RETURN_CONST                    2: None
+                [Code]
+                    File Name: DorkSearcherV2.py
+                    Object Name: buscar_desde_archivo
+                    Qualified Name: ghost_initi.<locals>.buscar_desde_archivo
+                    Arg Count: 3
+                    Pos Only Arg Count: 0
+                    KW Only Arg Count: 0
+                    Stack Size: 10
+                    Flags: 0x00000013 (CO_OPTIMIZED | CO_NEWLOCALS | CO_NESTED)
+                    [Names]
+                        'open'
+                        'readlines'
+                        'strip'
+                        'ThreadPoolExecutor'
+                        'submit'
+                        'as_completed'
+                        'result'
+                        'FileNotFoundError'
+                        'print'
+                    [Locals+Names]
+                        'archivo_keywords'
+                        'archivo_resultados'
+                        'archivo_proxies'
+                        'file'
+                        'line'
+                        'proxies'
+                        'queries'
+                        'executor'
+                        'query'
+                        'futures'
+                        'future'
+                        'e'
+                        'NUM_HILOS'
+                        'buscar_y_guardar'
+                    [Constants]
+                        'Lee t├⌐rminos de b├║squeda y proxies desde archivos, realiza b├║squedas para cada uno, y guarda los resultados.'
+                        'r'
+                        'utf-8'
+                        (
+                            'encoding'
+                        )
+                        None
+                        (
+                            'max_workers'
+                        )
+                        'Error: '
+                    [Disassembly]
+                        0       COPY_FREE_VARS                  2
+                        2       RESUME                          0
+                        4       NOP
+                        6       LOAD_GLOBAL                     1: NULL + open
+                        16      LOAD_FAST                       2: archivo_proxies
+                        18      LOAD_CONST                      1: 'r'
+                        20      LOAD_CONST                      2: 'utf-8'
+                        22      KW_NAMES                        3: ('encoding',)
+                        24      CALL                            3
+                        32      BEFORE_WITH
+                        34      STORE_FAST                      3: file
+                        36      LOAD_FAST                       3: file
+                        38      LOAD_ATTR                       3: readlines
+                        58      CALL                            0
+                        66      GET_ITER
+                        68      LOAD_FAST_AND_CLEAR             4: line
+                        70      SWAP                            2
+                        72      BUILD_LIST                      0
+                        74      SWAP                            2
+                        76      FOR_ITER                        18 (to 114)
+                        80      STORE_FAST                      4: line
+                        82      LOAD_FAST                       4: line
+                        84      LOAD_ATTR                       5: strip
+                        104     CALL                            0
+                        112     LIST_APPEND                     2
+                        114     JUMP_BACKWARD                   20 (to 76)
+                        116     END_FOR
+                        118     STORE_FAST                      5: proxies
+                        120     STORE_FAST                      4: line
+                        122     LOAD_CONST                      4: None
+                        124     LOAD_CONST                      4: None
+                        126     LOAD_CONST                      4: None
+                        128     CALL                            2
+                        136     POP_TOP
+                        138     LOAD_GLOBAL                     1: NULL + open
+                        148     LOAD_FAST                       0: archivo_keywords
+                        150     LOAD_CONST                      1: 'r'
+                        152     LOAD_CONST                      2: 'utf-8'
+                        154     KW_NAMES                        3: ('encoding',)
+                        156     CALL                            3
+                        164     BEFORE_WITH
+                        166     STORE_FAST                      3: file
+                        168     LOAD_FAST                       3: file
+                        170     LOAD_ATTR                       3: readlines
+                        190     CALL                            0
+                        198     GET_ITER
+                        200     LOAD_FAST_AND_CLEAR             4: line
+                        202     SWAP                            2
+                        204     BUILD_LIST                      0
+                        206     SWAP                            2
+                        208     FOR_ITER                        35 (to 280)
+                        212     STORE_FAST                      4: line
+                        214     LOAD_FAST                       4: line
+                        216     LOAD_ATTR                       5: strip
+                        236     CALL                            0
+                        244     POP_JUMP_IF_TRUE                1 (to 248)
+                        246     JUMP_BACKWARD                   20 (to 208)
+                        248     LOAD_FAST                       4: line
+                        250     LOAD_ATTR                       5: strip
+                        270     CALL                            0
+                        278     LIST_APPEND                     2
+                        280     JUMP_BACKWARD                   37 (to 208)
+                        282     END_FOR
+                        284     STORE_FAST                      6: queries
+                        286     STORE_FAST                      4: line
+                        288     LOAD_CONST                      4: None
+                        290     LOAD_CONST                      4: None
+                        292     LOAD_CONST                      4: None
+                        294     CALL                            2
+                        302     POP_TOP
+                        304     LOAD_GLOBAL                     7: NULL + ThreadPoolExecutor
+                        314     LOAD_DEREF                      12: NUM_HILOS
+                        316     KW_NAMES                        5: ('max_workers',)
+                        318     CALL                            1
+                        326     BEFORE_WITH
+                        328     STORE_FAST                      7: executor
+                        330     LOAD_FAST_CHECK                 6: queries
+                        332     GET_ITER
+                        334     LOAD_FAST_AND_CLEAR             8: query
+                        336     SWAP                            2
+                        338     BUILD_LIST                      0
+                        340     SWAP                            2
+                        342     FOR_ITER                        22 (to 388)
+                        346     STORE_FAST                      8: query
+                        348     LOAD_FAST                       7: executor
+                        350     LOAD_ATTR                       9: submit
+                        370     LOAD_DEREF                      13: buscar_y_guardar
+                        372     LOAD_FAST                       8: query
+                        374     LOAD_FAST                       1: archivo_resultados
+                        376     LOAD_FAST_CHECK                 5: proxies
+                        378     CALL                            4
+                        386     LIST_APPEND                     2
+                        388     JUMP_BACKWARD                   24 (to 342)
+                        390     END_FOR
+                        392     STORE_FAST                      9: futures
+                        394     STORE_FAST                      8: query
+                        396     LOAD_GLOBAL                     11: NULL + as_completed
+                        406     LOAD_FAST                       9: futures
+                        408     CALL                            1
+                        416     GET_ITER
+                        418     FOR_ITER                        18 (to 456)
+                        422     STORE_FAST                      10: future
+                        424     LOAD_FAST                       10: future
+                        426     LOAD_ATTR                       13: result
+                        446     CALL                            0
+                        454     POP_TOP
+                        456     JUMP_BACKWARD                   20 (to 418)
+                        458     END_FOR
+                        460     NOP
+                        462     LOAD_CONST                      4: None
+                        464     LOAD_CONST                      4: None
+                        466     LOAD_CONST                      4: None
+                        468     CALL                            2
+                        476     POP_TOP
+                        478     RETURN_CONST                    4: None
+                        480     SWAP                            2
+                        482     POP_TOP
+                        484     SWAP                            2
+                        486     STORE_FAST                      4: line
+                        488     RERAISE                         0
+                        490     PUSH_EXC_INFO
+                        492     WITH_EXCEPT_START
+                        494     POP_JUMP_IF_TRUE                1 (to 498)
+                        496     RERAISE                         2
+                        498     POP_TOP
+                        500     POP_EXCEPT
+                        502     POP_TOP
+                        504     POP_TOP
+                        506     JUMP_BACKWARD                   185 (to 138)
+                        508     COPY                            3
+                        510     POP_EXCEPT
+                        512     RERAISE                         1
+                        514     SWAP                            2
+                        516     POP_TOP
+                        518     SWAP                            2
+                        520     STORE_FAST                      4: line
+                        522     RERAISE                         0
+                        524     PUSH_EXC_INFO
+                        526     WITH_EXCEPT_START
+                        528     POP_JUMP_IF_TRUE                1 (to 532)
+                        530     RERAISE                         2
+                        532     POP_TOP
+                        534     POP_EXCEPT
+                        536     POP_TOP
+                        538     POP_TOP
+                        540     JUMP_BACKWARD                   119 (to 304)
+                        542     COPY                            3
+                        544     POP_EXCEPT
+                        546     RERAISE                         1
+                        548     SWAP                            2
+                        550     POP_TOP
+                        552     SWAP                            2
+                        554     STORE_FAST                      8: query
+                        556     RERAISE                         0
+                        558     PUSH_EXC_INFO
+                        560     WITH_EXCEPT_START
+                        562     POP_JUMP_IF_TRUE                1 (to 566)
+                        564     RERAISE                         2
+                        566     POP_TOP
+                        568     POP_EXCEPT
+                        570     POP_TOP
+                        572     POP_TOP
+                        574     RETURN_CONST                    4: None
+                        576     COPY                            3
+                        578     POP_EXCEPT
+                        580     RERAISE                         1
+                        582     PUSH_EXC_INFO
+                        584     LOAD_GLOBAL                     14: FileNotFoundError
+                        594     CHECK_EXC_MATCH
+                        596     POP_JUMP_IF_FALSE               24 (to 646)
+                        598     STORE_FAST                      11: e
+                        600     LOAD_GLOBAL                     17: NULL + print
+                        610     LOAD_CONST                      6: 'Error: '
+                        612     LOAD_FAST                       11: e
+                        614     FORMAT_VALUE                    0 (FVC_NONE)
+                        616     BUILD_STRING                    2
+                        618     CALL                            1
+                        626     POP_TOP
+                        628     POP_EXCEPT
+                        630     LOAD_CONST                      4: None
+                        632     STORE_FAST                      11: e
+                        634     DELETE_FAST                     11: e
+                        636     RETURN_CONST                    4: None
+                        638     LOAD_CONST                      4: None
+                        640     STORE_FAST                      11: e
+                        642     DELETE_FAST                     11: e
+                        644     RERAISE                         1
+                        646     RERAISE                         0
+                        648     COPY                            3
+                        650     POP_EXCEPT
+                        652     RERAISE                         1
+                'dorks.txt'
+                'proxies.txt'
+                (
+                    'results.txt'
+                )
+                (
+                    None
+                )
+            [Disassembly]
+                0       MAKE_CELL                       7: DELAY_REINTENTO
+                2       MAKE_CELL                       8: MAX_REINTENTOS_PROXY
+                4       MAKE_CELL                       9: NUM_HILOS
+                6       MAKE_CELL                       10: NUM_RESULTADOS
+                8       MAKE_CELL                       11: TIMEOUT
+                10      MAKE_CELL                       12: buscar_y_guardar
+                12      MAKE_CELL                       13: count_lines
+                14      MAKE_CELL                       14: filtrar_y_guardar_resultados
+                16      MAKE_CELL                       15: headers
+                18      MAKE_CELL                       16: realizar_busqueda
+                20      MAKE_CELL                       17: remove_duplicates
+                22      MAKE_CELL                       18: start_time
+                24      RESUME                          0
+                26      LOAD_GLOBAL                     1: NULL + print
+                36      LOAD_CONST                      1: '\n          \n ΓûêΓûêΓûêΓûêΓûêΓûêΓòù ΓûêΓûêΓûêΓûêΓûêΓûêΓòù ΓûêΓûêΓûêΓòù   ΓûêΓûêΓòùΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓòùΓûêΓûêΓòù ΓûêΓûêΓûêΓûêΓûêΓûêΓòù ΓûêΓûêΓòù   ΓûêΓûêΓòùΓûêΓûêΓûêΓûêΓûêΓûêΓòù ΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓòù\nΓûêΓûêΓòöΓòÉΓòÉΓòÉΓòÉΓò¥ΓûêΓûêΓòöΓòÉΓòÉΓòÉΓûêΓûêΓòùΓûêΓûêΓûêΓûêΓòù  ΓûêΓûêΓòæΓûêΓûêΓòöΓòÉΓòÉΓòÉΓòÉΓò¥ΓûêΓûêΓòæΓûêΓûêΓòöΓòÉΓòÉΓòÉΓòÉΓò¥ ΓûêΓûêΓòæ   ΓûêΓûêΓòæΓûêΓûêΓòöΓòÉΓòÉΓûêΓûêΓòùΓûêΓûêΓòöΓòÉΓòÉΓòÉΓòÉΓò¥\nΓûêΓûêΓòæ     ΓûêΓûêΓòæ   ΓûêΓûêΓòæΓûêΓûêΓòöΓûêΓûêΓòù ΓûêΓûêΓòæΓûêΓûêΓûêΓûêΓûêΓòù  ΓûêΓûêΓòæΓûêΓûêΓòæ  ΓûêΓûêΓûêΓòùΓûêΓûêΓòæ   ΓûêΓûêΓòæΓûêΓûêΓûêΓûêΓûêΓûêΓòöΓò¥ΓûêΓûêΓûêΓûêΓûêΓòù  \nΓûêΓûêΓòæ     ΓûêΓûêΓòæ   ΓûêΓûêΓòæΓûêΓûêΓòæΓòÜΓûêΓûêΓòùΓûêΓûêΓòæΓûêΓûêΓòöΓòÉΓòÉΓò¥  ΓûêΓûêΓòæΓûêΓûêΓòæ   ΓûêΓûêΓòæΓûêΓûêΓòæ   ΓûêΓûêΓòæΓûêΓûêΓòöΓòÉΓòÉΓûêΓûêΓòùΓûêΓûêΓòöΓòÉΓòÉΓò¥  \nΓòÜΓûêΓûêΓûêΓûêΓûêΓûêΓòùΓòÜΓûêΓûêΓûêΓûêΓûêΓûêΓòöΓò¥ΓûêΓûêΓòæ ΓòÜΓûêΓûêΓûêΓûêΓòæΓûêΓûêΓòæ     ΓûêΓûêΓòæΓòÜΓûêΓûêΓûêΓûêΓûêΓûêΓòöΓò¥ΓòÜΓûêΓûêΓûêΓûêΓûêΓûêΓòöΓò¥ΓûêΓûêΓòæ  ΓûêΓûêΓòæΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓòù\n ΓòÜΓòÉΓòÉΓòÉΓòÉΓòÉΓò¥ ΓòÜΓòÉΓòÉΓòÉΓòÉΓòÉΓò¥ ΓòÜΓòÉΓò¥  ΓòÜΓòÉΓòÉΓòÉΓò¥ΓòÜΓòÉΓò¥     ΓòÜΓòÉΓò¥ ΓòÜΓòÉΓòÉΓòÉΓòÉΓòÉΓò¥  ΓòÜΓòÉΓòÉΓòÉΓòÉΓòÉΓò¥ ΓòÜΓòÉΓò¥  ΓòÜΓòÉΓò¥ΓòÜΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ\n                       1     2\n          Recomendado 100 \\ 200\n          \n          '
+                38      CALL                            1
+                46      POP_TOP
+                48      NOP
+                50      LOAD_GLOBAL                     3: NULL + int
+                60      LOAD_GLOBAL                     5: NULL + input
+                70      LOAD_CONST                      2: 'Numero de URLS por peticiones: '
+                72      CALL                            1
+                80      CALL                            1
+                88      STORE_FAST                      0: petres
+                90      LOAD_GLOBAL                     3: NULL + int
+                100     LOAD_GLOBAL                     5: NULL + input
+                110     LOAD_CONST                      3: 'Cantidad de Bots (0-500): '
+                112     CALL                            1
+                120     CALL                            1
+                128     STORE_FAST                      1: Bots
+                130     LOAD_FAST_CHECK                 0: petres
+                132     STORE_DEREF                     10: NUM_RESULTADOS
+                134     LOAD_CONST                      5: 0
+                136     STORE_DEREF                     7: DELAY_REINTENTO
+                138     LOAD_CONST                      6: 50
+                140     STORE_DEREF                     8: MAX_REINTENTOS_PROXY
+                142     LOAD_CONST                      7: 10
+                144     STORE_DEREF                     11: TIMEOUT
+                146     LOAD_FAST_CHECK                 1: Bots
+                148     STORE_DEREF                     9: NUM_HILOS
+                150     LOAD_CONST                      8: <CODE> count_lines
+                152     MAKE_FUNCTION                   0
+                154     STORE_DEREF                     13: count_lines
+                156     LOAD_CONST                      18: ('results.txt',)
+                158     LOAD_CONST                      10: <CODE> remove_duplicates
+                160     MAKE_FUNCTION                   1
+                162     STORE_DEREF                     17: remove_duplicates
+                164     LOAD_GLOBAL                     7: NULL + time
+                174     LOAD_ATTR                       6: time
+                194     CALL                            0
+                202     STORE_DEREF                     18: start_time
+                204     LOAD_CLOSURE                    18: start_time
+                206     BUILD_TUPLE                     1
+                208     LOAD_CONST                      11: <CODE> elapsed_time
+                210     MAKE_FUNCTION                   8
+                212     STORE_FAST                      2: elapsed_time
+                214     BUILD_MAP                       0
+                216     STORE_DEREF                     15: headers
+                218     LOAD_CONST                      19: (None,)
+                220     LOAD_CLOSURE                    10: NUM_RESULTADOS
+                222     LOAD_CLOSURE                    11: TIMEOUT
+                224     LOAD_CLOSURE                    15: headers
+                226     BUILD_TUPLE                     3
+                228     LOAD_CONST                      12: <CODE> realizar_busqueda
+                230     MAKE_FUNCTION                   9
+                232     STORE_DEREF                     16: realizar_busqueda
+                234     LOAD_CLOSURE                    13: count_lines
+                236     LOAD_CLOSURE                    17: remove_duplicates
+                238     BUILD_TUPLE                     2
+                240     LOAD_CONST                      13: <CODE> filtrar_y_guardar_resultados
+                242     MAKE_FUNCTION                   8
+                244     STORE_DEREF                     14: filtrar_y_guardar_resultados
+                246     LOAD_CLOSURE                    7: DELAY_REINTENTO
+                248     LOAD_CLOSURE                    8: MAX_REINTENTOS_PROXY
+                250     LOAD_CLOSURE                    14: filtrar_y_guardar_resultados
+                252     LOAD_CLOSURE                    16: realizar_busqueda
+                254     BUILD_TUPLE                     4
+                256     LOAD_CONST                      14: <CODE> buscar_y_guardar
+                258     MAKE_FUNCTION                   8
+                260     STORE_DEREF                     12: buscar_y_guardar
+                262     LOAD_CLOSURE                    9: NUM_HILOS
+                264     LOAD_CLOSURE                    12: buscar_y_guardar
+                266     BUILD_TUPLE                     2
+                268     LOAD_CONST                      15: <CODE> buscar_desde_archivo
+                270     MAKE_FUNCTION                   8
+                272     STORE_FAST                      3: buscar_desde_archivo
+                274     LOAD_CONST                      16: 'dorks.txt'
+                276     STORE_FAST                      4: archivo_keywords
+                278     LOAD_CONST                      9: 'results.txt'
+                280     STORE_FAST                      5: archivo_resultados
+                282     LOAD_CONST                      17: 'proxies.txt'
+                284     STORE_FAST                      6: archivo_proxies
+                286     PUSH_NULL
+                288     LOAD_FAST                       3: buscar_desde_archivo
+                290     LOAD_FAST                       4: archivo_keywords
+                292     LOAD_FAST                       5: archivo_resultados
+                294     LOAD_FAST                       6: archivo_proxies
+                296     CALL                            3
+                304     POP_TOP
+                306     RETURN_CONST                    0: None
+                308     PUSH_EXC_INFO
+                310     POP_TOP
+                312     LOAD_GLOBAL                     1: NULL + print
+                322     LOAD_CONST                      4: 'Error Debiste Escribir un valor numerico'
+                324     CALL                            1
+                332     POP_TOP
+                334     POP_EXCEPT
+                336     JUMP_BACKWARD                   104 (to 130)
+                338     COPY                            3
+                340     POP_EXCEPT
+                342     RERAISE                         1
+        '__main__'
+        '\n          \n    ____             __      _____                      __             \n   / __ \\____  _____/ /__   / ___/___  ____ ___________/ /_  ___  _____\n  / / / / __ \\/ ___/ //_/   \\__ \\/ _ \\/ __ `/ ___/ ___/ __ \\/ _ \\/ ___/\n / /_/ / /_/ / /  / ,<     ___/ /  __/ /_/ / /  / /__/ / / /  __/ /    \n/_____/\\____/_/  /_/|_|   /____/\\___/\\__,_/_/   \\___/_/ /_/\\___/_/     \n                                                                                 \n                                             By@GhostHat_Real1\n          \n          \n          \n          \n|~~~~~~~MENU~~~~~~~~|          \n          \n1- Iniciar Programa\n2- Salir del programa\n3- Quien Soy? --> Telegram\n          \n          '
+        'Elije tu opcion----->'
+        1
+        'Verificando Key...'
+        [Code]
+            File Name: DorkSearcherV2.py
+            Object Name: get_windows_unique_id
+            Qualified Name: get_windows_unique_id
+            Arg Count: 0
+            Pos Only Arg Count: 0
+            KW Only Arg Count: 0
+            Stack Size: 7
+            Flags: 0x00000003 (CO_OPTIMIZED | CO_NEWLOCALS)
+            [Names]
+                'wmi'
+                'WMI'
+                'Win32_DiskDrive'
+                'SerialNumber'
+                'strip'
+                'Win32_Processor'
+                'ProcessorId'
+                'Win32_OperatingSystem'
+                'Caption'
+                'subprocess'
+                'check_output'
+                'decode'
+                'split'
+                'hashlib'
+                'sha256'
+                'encode'
+                'hexdigest'
+                'Exception'
+                'print'
+                'Fore'
+                'RED'
+                'RESET'
+            [Locals+Names]
+                'c'
+                'disk_info'
+                'disk_serial'
+                'cpu_info'
+                'cpu_id'
+                'os_info'
+                'os_name'
+                'cmd'
+                'result'
+                'unique_string'
+                'unique_id'
+                'e'
+            [Constants]
+                None
+                0
+                'wmic csproduct get uuid'
+                True
+                (
+                    'shell'
+                )
+                '\n'
+                -1
+                '-'
+                'Error al obtener el ID ├║nico del sistema: '
+            [Disassembly]
+                0       RESUME                          0
+                2       NOP
+                4       LOAD_GLOBAL                     1: NULL + wmi
+                14      LOAD_ATTR                       2: WMI
+                34      CALL                            0
+                42      STORE_FAST                      0: c
+                44      LOAD_FAST                       0: c
+                46      LOAD_ATTR                       5: Win32_DiskDrive
+                66      CALL                            0
+                74      LOAD_CONST                      1: 0
+                76      BINARY_SUBSCR
+                80      STORE_FAST                      1: disk_info
+                82      LOAD_FAST                       1: disk_info
+                84      LOAD_ATTR                       6: SerialNumber
+                104     LOAD_ATTR                       9: strip
+                124     CALL                            0
+                132     STORE_FAST                      2: disk_serial
+                134     LOAD_FAST                       0: c
+                136     LOAD_ATTR                       11: Win32_Processor
+                156     CALL                            0
+                164     LOAD_CONST                      1: 0
+                166     BINARY_SUBSCR
+                170     STORE_FAST                      3: cpu_info
+                172     LOAD_FAST                       3: cpu_info
+                174     LOAD_ATTR                       12: ProcessorId
+                194     LOAD_ATTR                       9: strip
+                214     CALL                            0
+                222     STORE_FAST                      4: cpu_id
+                224     LOAD_FAST                       0: c
+                226     LOAD_ATTR                       15: Win32_OperatingSystem
+                246     CALL                            0
+                254     LOAD_CONST                      1: 0
+                256     BINARY_SUBSCR
+                260     STORE_FAST                      5: os_info
+                262     LOAD_FAST                       5: os_info
+                264     LOAD_ATTR                       16: Caption
+                284     LOAD_ATTR                       9: strip
+                304     CALL                            0
+                312     STORE_FAST                      6: os_name
+                314     LOAD_CONST                      2: 'wmic csproduct get uuid'
+                316     STORE_FAST                      7: cmd
+                318     LOAD_GLOBAL                     19: NULL + subprocess
+                328     LOAD_ATTR                       20: check_output
+                348     LOAD_FAST                       7: cmd
+                350     LOAD_CONST                      3: True
+                352     KW_NAMES                        4: ('shell',)
+                354     CALL                            2
+                362     LOAD_ATTR                       23: decode
+                382     CALL                            0
+                390     LOAD_ATTR                       9: strip
+                410     CALL                            0
+                418     LOAD_ATTR                       25: split
+                438     LOAD_CONST                      5: '\n'
+                440     CALL                            1
+                448     LOAD_CONST                      6: -1
+                450     BINARY_SUBSCR
+                454     LOAD_ATTR                       9: strip
+                474     CALL                            0
+                482     STORE_FAST                      8: result
+                484     LOAD_FAST                       2: disk_serial
+                486     FORMAT_VALUE                    0 (FVC_NONE)
+                488     LOAD_CONST                      7: '-'
+                490     LOAD_FAST                       4: cpu_id
+                492     FORMAT_VALUE                    0 (FVC_NONE)
+                494     LOAD_CONST                      7: '-'
+                496     LOAD_FAST                       6: os_name
+                498     FORMAT_VALUE                    0 (FVC_NONE)
+                500     LOAD_CONST                      7: '-'
+                502     LOAD_FAST                       8: result
+                504     FORMAT_VALUE                    0 (FVC_NONE)
+                506     BUILD_STRING                    7
+                508     STORE_FAST                      9: unique_string
+                510     LOAD_GLOBAL                     27: NULL + hashlib
+                520     LOAD_ATTR                       28: sha256
+                540     LOAD_FAST                       9: unique_string
+                542     LOAD_ATTR                       31: encode
+                562     CALL                            0
+                570     CALL                            1
+                578     LOAD_ATTR                       33: hexdigest
+                598     CALL                            0
+                606     STORE_FAST                      10: unique_id
+                608     LOAD_FAST                       10: unique_id
+                610     RETURN_VALUE
+                612     PUSH_EXC_INFO
+                614     LOAD_GLOBAL                     34: Exception
+                624     CHECK_EXC_MATCH
+                626     POP_JUMP_IF_FALSE               58 (to 744)
+                628     STORE_FAST                      11: e
+                630     LOAD_GLOBAL                     37: NULL + print
+                640     LOAD_GLOBAL                     38: Fore
+                650     LOAD_ATTR                       40: RED
+                670     LOAD_CONST                      8: 'Error al obtener el ID ├║nico del sistema: '
+                672     LOAD_FAST                       11: e
+                674     FORMAT_VALUE                    0 (FVC_NONE)
+                676     BUILD_STRING                    2
+                678     BINARY_OP                       0 (+)
+                682     LOAD_GLOBAL                     38: Fore
+                692     LOAD_ATTR                       42: RESET
+                712     BINARY_OP                       0 (+)
+                716     CALL                            1
+                724     POP_TOP
+                726     POP_EXCEPT
+                728     LOAD_CONST                      0: None
+                730     STORE_FAST                      11: e
+                732     DELETE_FAST                     11: e
+                734     RETURN_CONST                    0: None
+                736     LOAD_CONST                      0: None
+                738     STORE_FAST                      11: e
+                740     DELETE_FAST                     11: e
+                742     RERAISE                         1
+                744     RERAISE                         0
+                746     COPY                            3
+                748     POP_EXCEPT
+                750     RERAISE                         1
+        [Code]
+            File Name: DorkSearcherV2.py
+            Object Name: verificar_clave
+            Qualified Name: verificar_clave
+            Arg Count: 0
+            Pos Only Arg Count: 0
+            KW Only Arg Count: 0
+            Stack Size: 6
+            Flags: 0x00000003 (CO_OPTIMIZED | CO_NEWLOCALS)
+            [Names]
+                'requests'
+                'get'
+                'raise_for_status'
+                'json'
+                'RequestException'
+                'print'
+                'Fore'
+                'RED'
+                'RESET'
+            [Locals+Names]
+                'url'
+                'response'
+                'e'
+            [Constants]
+                'Verifica la clave consultando un recurso en l├¡nea.'
+                'https://api.github.com/gists/36eeb7114e51f8b14c73eb9185c085e3/comments'
+                11
+                'body'
+                'Error al verificar la clave: '
+                None
+            [Disassembly]
+                0       RESUME                          0
+                2       NOP
+                4       LOAD_CONST                      1: 'https://api.github.com/gists/36eeb7114e51f8b14c73eb9185c085e3/comments'
+                6       STORE_FAST                      0: url
+                8       LOAD_GLOBAL                     1: NULL + requests
+                18      LOAD_ATTR                       2: get
+                38      LOAD_FAST                       0: url
+                40      CALL                            1
+                48      STORE_FAST                      1: response
+                50      LOAD_FAST                       1: response
+                52      LOAD_ATTR                       5: raise_for_status
+                72      CALL                            0
+                80      POP_TOP
+                82      LOAD_FAST                       1: response
+                84      LOAD_ATTR                       7: json
+                104     CALL                            0
+                112     LOAD_CONST                      2: 11
+                114     BINARY_SUBSCR
+                118     LOAD_CONST                      3: 'body'
+                120     BINARY_SUBSCR
+                124     RETURN_VALUE
+                126     PUSH_EXC_INFO
+                128     LOAD_GLOBAL                     0: requests
+                138     LOAD_ATTR                       8: RequestException
+                158     CHECK_EXC_MATCH
+                160     POP_JUMP_IF_FALSE               58 (to 278)
+                162     STORE_FAST                      2: e
+                164     LOAD_GLOBAL                     11: NULL + print
+                174     LOAD_GLOBAL                     12: Fore
+                184     LOAD_ATTR                       14: RED
+                204     LOAD_CONST                      4: 'Error al verificar la clave: '
+                206     LOAD_FAST                       2: e
+                208     FORMAT_VALUE                    0 (FVC_NONE)
+                210     BUILD_STRING                    2
+                212     BINARY_OP                       0 (+)
+                216     LOAD_GLOBAL                     12: Fore
+                226     LOAD_ATTR                       16: RESET
+                246     BINARY_OP                       0 (+)
+                250     CALL                            1
+                258     POP_TOP
+                260     POP_EXCEPT
+                262     LOAD_CONST                      5: None
+                264     STORE_FAST                      2: e
+                266     DELETE_FAST                     2: e
+                268     RETURN_CONST                    5: None
+                270     LOAD_CONST                      5: None
+                272     STORE_FAST                      2: e
+                274     DELETE_FAST                     2: e
+                276     RERAISE                         1
+                278     RERAISE                         0
+                280     COPY                            3
+                282     POP_EXCEPT
+                284     RERAISE                         1
+        '7dayslicense'
+        'Key Verificada Correctamente...\niniciando...'
+        3
+        'cls'
+        'Error al Verificar la key..'
+    [Disassembly]
+        0       RESUME                          0
+        2       LOAD_CONST                      0: 0
+        4       LOAD_CONST                      1: None
+        6       IMPORT_NAME                     0: requests
+        8       STORE_NAME                      0: requests
+        10      LOAD_CONST                      0: 0
+        12      LOAD_CONST                      1: None
+        14      IMPORT_NAME                     1: random
+        16      STORE_NAME                      1: random
+        18      LOAD_CONST                      0: 0
+        20      LOAD_CONST                      1: None
+        22      IMPORT_NAME                     2: threading
+        24      STORE_NAME                      2: threading
+        26      LOAD_CONST                      0: 0
+        28      LOAD_CONST                      2: ('ThreadPoolExecutor', 'as_completed')
+        30      IMPORT_NAME                     3: concurrent.futures
+        32      IMPORT_FROM                     4: ThreadPoolExecutor
+        34      STORE_NAME                      4: ThreadPoolExecutor
+        36      IMPORT_FROM                     5: as_completed
+        38      STORE_NAME                      5: as_completed
+        40      POP_TOP
+        42      LOAD_CONST                      0: 0
+        44      LOAD_CONST                      3: ('BeautifulSoup',)
+        46      IMPORT_NAME                     6: bs4
+        48      IMPORT_FROM                     7: BeautifulSoup
+        50      STORE_NAME                      7: BeautifulSoup
+        52      POP_TOP
+        54      LOAD_CONST                      0: 0
+        56      LOAD_CONST                      1: None
+        58      IMPORT_NAME                     8: colorama
+        60      STORE_NAME                      8: colorama
+        62      LOAD_CONST                      0: 0
+        64      LOAD_CONST                      4: ('Fore',)
+        66      IMPORT_NAME                     8: colorama
+        68      IMPORT_FROM                     9: Fore
+        70      STORE_NAME                      9: Fore
+        72      POP_TOP
+        74      LOAD_CONST                      0: 0
+        76      LOAD_CONST                      1: None
+        78      IMPORT_NAME                     10: time
+        80      STORE_NAME                      10: time
+        82      LOAD_CONST                      0: 0
+        84      LOAD_CONST                      5: ('unquote',)
+        86      IMPORT_NAME                     11: urllib.parse
+        88      IMPORT_FROM                     12: unquote
+        90      STORE_NAME                      12: unquote
+        92      POP_TOP
+        94      LOAD_CONST                      0: 0
+        96      LOAD_CONST                      1: None
+        98      IMPORT_NAME                     13: os
+        100     STORE_NAME                      13: os
+        102     LOAD_CONST                      0: 0
+        104     LOAD_CONST                      1: None
+        106     IMPORT_NAME                     14: wmi
+        108     STORE_NAME                      14: wmi
+        110     LOAD_CONST                      0: 0
+        112     LOAD_CONST                      1: None
+        114     IMPORT_NAME                     15: hashlib
+        116     STORE_NAME                      15: hashlib
+        118     LOAD_CONST                      0: 0
+        120     LOAD_CONST                      1: None
+        122     IMPORT_NAME                     16: subprocess
+        124     STORE_NAME                      16: subprocess
+        126     PUSH_NULL
+        128     LOAD_NAME                       8: colorama
+        130     LOAD_ATTR                       34: init
+        150     CALL                            0
+        158     POP_TOP
+        160     LOAD_CONST                      6: <CODE> ghost_initi
+        162     MAKE_FUNCTION                   0
+        164     STORE_NAME                      18: ghost_initi
+        166     LOAD_NAME                       19: __name__
+        168     LOAD_CONST                      7: '__main__'
+        170     COMPARE_OP                      40 (==)
+        174     POP_JUMP_IF_FALSE               225 (to 626)
+        176     PUSH_NULL
+        178     LOAD_NAME                       20: print
+        180     LOAD_NAME                       9: Fore
+        182     LOAD_ATTR                       42: RED
+        202     LOAD_CONST                      8: '\n          \n    ____             __      _____                      __             \n   / __ \\____  _____/ /__   / ___/___  ____ ___________/ /_  ___  _____\n  / / / / __ \\/ ___/ //_/   \\__ \\/ _ \\/ __ `/ ___/ ___/ __ \\/ _ \\/ ___/\n / /_/ / /_/ / /  / ,<     ___/ /  __/ /_/ / /  / /__/ / / /  __/ /    \n/_____/\\____/_/  /_/|_|   /____/\\___/\\__,_/_/   \\___/_/ /_/\\___/_/     \n                                                                                 \n                                             By@GhostHat_Real1\n          \n          \n          \n          \n|~~~~~~~MENU~~~~~~~~|          \n          \n1- Iniciar Programa\n2- Salir del programa\n3- Quien Soy? --> Telegram\n          \n          '
+        204     BINARY_OP                       0 (+)
+        208     LOAD_NAME                       9: Fore
+        210     LOAD_ATTR                       44: RESET
+        230     BINARY_OP                       0 (+)
+        234     CALL                            1
+        242     POP_TOP
+        244     PUSH_NULL
+        246     LOAD_NAME                       23: int
+        248     PUSH_NULL
+        250     LOAD_NAME                       24: input
+        252     LOAD_CONST                      9: 'Elije tu opcion----->'
+        254     CALL                            1
+        262     CALL                            1
+        270     STORE_NAME                      25: opcion
+        272     LOAD_NAME                       25: opcion
+        274     LOAD_CONST                      10: 1
+        276     COMPARE_OP                      40 (==)
+        280     POP_JUMP_IF_FALSE               171 (to 624)
+        282     PUSH_NULL
+        284     LOAD_NAME                       20: print
+        286     LOAD_NAME                       9: Fore
+        288     LOAD_ATTR                       52: BLUE
+        308     LOAD_CONST                      11: 'Verificando Key...'
+        310     BINARY_OP                       0 (+)
+        314     LOAD_NAME                       9: Fore
+        316     LOAD_ATTR                       44: RESET
+        336     BINARY_OP                       0 (+)
+        340     CALL                            1
+        348     POP_TOP
+        350     LOAD_CONST                      12: <CODE> get_windows_unique_id
+        352     MAKE_FUNCTION                   0
+        354     STORE_NAME                      27: get_windows_unique_id
+        356     LOAD_CONST                      13: <CODE> verificar_clave
+        358     MAKE_FUNCTION                   0
+        360     STORE_NAME                      28: verificar_clave
+        362     PUSH_NULL
+        364     LOAD_NAME                       27: get_windows_unique_id
+        366     CALL                            0
+        374     STORE_NAME                      29: UID
+        376     PUSH_NULL
+        378     LOAD_NAME                       28: verificar_clave
+        380     CALL                            0
+        388     STORE_NAME                      30: clave
+        390     LOAD_CONST                      14: '7dayslicense'
+        392     LOAD_NAME                       30: clave
+        394     CONTAINS_OP                     0 (in)
+        396     POP_JUMP_IF_FALSE               78 (to 554)
+        398     PUSH_NULL
+        400     LOAD_NAME                       20: print
+        402     LOAD_NAME                       9: Fore
+        404     LOAD_ATTR                       62: YELLOW
+        424     LOAD_CONST                      15: 'Key Verificada Correctamente...\niniciando...'
+        426     BINARY_OP                       0 (+)
+        430     LOAD_NAME                       9: Fore
+        432     LOAD_ATTR                       44: RESET
+        452     BINARY_OP                       0 (+)
+        456     CALL                            1
+        464     POP_TOP
+        466     PUSH_NULL
+        468     LOAD_NAME                       10: time
+        470     LOAD_ATTR                       64: sleep
+        490     LOAD_CONST                      16: 3
+        492     CALL                            1
+        500     POP_TOP
+        502     PUSH_NULL
+        504     LOAD_NAME                       13: os
+        506     LOAD_ATTR                       66: system
+        526     LOAD_CONST                      17: 'cls'
+        528     CALL                            1
+        536     POP_TOP
+        538     PUSH_NULL
+        540     LOAD_NAME                       18: ghost_initi
+        542     CALL                            0
+        550     POP_TOP
+        552     RETURN_CONST                    1: None
+        554     PUSH_NULL
+        556     LOAD_NAME                       20: print
+        558     LOAD_NAME                       9: Fore
+        560     LOAD_ATTR                       42: RED
+        580     LOAD_CONST                      18: 'Error al Verificar la key..'
+        582     BINARY_OP                       0 (+)
+        586     LOAD_NAME                       9: Fore
+        588     LOAD_ATTR                       44: RESET
+        608     BINARY_OP                       0 (+)
+        612     CALL                            1
+        620     POP_TOP
+        622     RETURN_CONST                    1: None
+        624     RETURN_CONST                    1: None
+        626     RETURN_CONST                    1: None
